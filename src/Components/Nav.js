@@ -17,7 +17,7 @@ return (
             <Link to="/">home</Link>
         </li>
         <li >
-            <Link to="/">home</Link>
+            <Link to="/Shop">Shop</Link>
         </li>
         <li >
             <Link to="/">home</Link>
