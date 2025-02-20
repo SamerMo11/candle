@@ -1,17 +1,19 @@
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Nav from "./Components/Nav";
 import Home from "./Components/Home";
 // import Contact from "./Components/Contact";
 
 function App() {
-  <Router>
-    <Home/>
+  return(
+    <Router>
+    <Nav/>
     <Routes>
     <Route path="/" element={<Home />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+    {/* <Route path="/Contact" element={<Contact />} /> */}
     </Routes>
-    
   </Router>
+  )
 }
 
 export default App;

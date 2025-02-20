@@ -5,3 +5,23 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --fonts: #6F5743;
+    --f: #fff;
+    --btns: #B29B8A;
+    
+}
+body{
+    margin: 0;
+    height: 100vh;
+}
+#root{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    /* background-color: #171717; */
+}

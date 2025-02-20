@@ -1,15 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion, stagger, transform } from "framer-motion";
+import "../Css/Nav.css"
+import logo from "../Assets/logo.png"
+
+
+// import { motion} from "framer-motion";
 
 function Nav() {
 return (
 <nav>
-    <motion.ul>
-        <motion.li >
+    <div className="logo">
+        <img src={logo} alt="logo"/>
+    </div>
+    <ul className="links">
+        <li >
             <Link to="/">home</Link>
-        </motion.li>
-    </motion.ul>
+        </li>
+        <li >
+            <Link to="/">home</Link>
+        </li>
+        <li >
+            <Link to="/">home</Link>
+        </li>
+        <li >
+            <Link to="/">home</Link>
+        </li>
+    </ul>
 </nav>
     );
   }
