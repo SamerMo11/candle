@@ -1,7 +1,7 @@
-import category1 from "../../Assets/home/category/1.jpg"
-import category2 from "../../Assets/home/category/2.jpg"
-import category3 from "../../Assets/home/category/3.jpg"
-import category4 from "../../Assets/home/category/4.jpg"
+import category1 from "../../Assets/home/category/1.webp"
+import category2 from "../../Assets/home/category/2.webp"
+import category3 from "../../Assets/home/category/3.webp"
+import category4 from "../../Assets/home/category/4.webp"
 
 
 export const categories = [

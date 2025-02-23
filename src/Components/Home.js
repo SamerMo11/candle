@@ -2,13 +2,13 @@ import "../Css/Home.css"
 import {servs1 ,servs2} from "../Datas/home/servs"
 import {categories} from "../Datas/home/categories"
 
-import hero from "../Assets/home/hero.jpg"
-import wleft from "../Assets/home/welcome/wleft.png"
-import wright from "../Assets/home/welcome/wright.png"
-import servcenter from "../Assets/home/servs/center.jpg"
+import hero from "../Assets/home/hero.webp"
+import wleft from "../Assets/home/welcome/wleft.webp"
+import wright from "../Assets/home/welcome/wright.webp"
+import servcenter from "../Assets/home/servs/center.webp"
 
-import about1 from "../Assets/home/about/about1.png"
-import about2 from "../Assets/home/about/about2.jpg"
+import about1 from "../Assets/home/about/about1.webp"
+import about2 from "../Assets/home/about/about2.webp"
 
 
 export default function Home(){

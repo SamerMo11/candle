@@ -1,11 +1,11 @@
-import product1 from "../../Assets/shop/cat2/1.jpg"
-import product2 from "../../Assets/shop/cat2/2.jpg"
-import product3 from "../../Assets/shop/cat2/3.jpg"
-import product4 from "../../Assets/shop/cat2/4.jpg"
-import product5 from "../../Assets/shop/cat2/5.jpg"
-import product6 from "../../Assets/shop/cat2/6.jpg"
-import product7 from "../../Assets/shop/cat2/7.jpg"
-import product8 from "../../Assets/shop/cat2/8.jpg"
+import product1 from "../../Assets/shop/cat2/1.webp"
+import product2 from "../../Assets/shop/cat2/2.webp"
+import product3 from "../../Assets/shop/cat2/3.webp"
+import product4 from "../../Assets/shop/cat2/4.webp"
+import product5 from "../../Assets/shop/cat2/5.webp"
+import product6 from "../../Assets/shop/cat2/6.webp"
+import product7 from "../../Assets/shop/cat2/7.webp"
+import product8 from "../../Assets/shop/cat2/8.webp"
 
 
 export const cat2 = [

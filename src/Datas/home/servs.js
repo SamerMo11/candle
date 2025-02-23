@@ -1,9 +1,9 @@
-import serv1 from "../../Assets/home/servs/1.png"
-import serv2 from "../../Assets/home/servs/2.png"
-import serv3 from "../../Assets/home/servs/3.png"
-import serv4 from "../../Assets/home/servs/4.png"
-import serv5 from "../../Assets/home/servs/5.png"
-import serv6 from "../../Assets/home/servs/6.png"
+import serv1 from "../../Assets/home/servs/1.webp"
+import serv2 from "../../Assets/home/servs/2.webp"
+import serv3 from "../../Assets/home/servs/3.webp"
+import serv4 from "../../Assets/home/servs/4.webp"
+import serv5 from "../../Assets/home/servs/5.webp"
+import serv6 from "../../Assets/home/servs/6.webp"
 
 export const servs1 = [
     {

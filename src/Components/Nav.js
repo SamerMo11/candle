@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Css/Nav.css"
-import logo from "../Assets/logo.png"
+import logo from "../Assets/logo.webp"
 
 
 // import { motion} from "framer-motion";
