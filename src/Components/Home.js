@@ -1,6 +1,6 @@
 import "../Css/Home.css"
-import {servs1 ,servs2} from "../Datas/servs"
-import {categories} from "../Datas/categories"
+import {servs1 ,servs2} from "../Datas/home/servs"
+import {categories} from "../Datas/home/categories"
 
 import hero from "../Assets/home/hero.jpg"
 import wleft from "../Assets/home/welcome/wleft.png"
