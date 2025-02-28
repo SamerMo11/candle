@@ -1,0 +1,38 @@
+.checkPage{
+    width: 90%;
+    min-height: 100vh;
+    max-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+
+    .backCart{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+            a{
+        /* width: 250px; */
+        text-decoration: none;
+        text-transform: capitalize;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid #584536;
+        border-radius: 10px;
+        color: #584536;
+        font-size: 21px;
+        padding: 10px 20px;
+        }
+    }
+}
+.checkCont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

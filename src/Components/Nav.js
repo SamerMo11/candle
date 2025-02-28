@@ -20,10 +20,13 @@ return (
             <Link to="/Shop">Shop</Link>
         </li>
         <li >
-            <Link to="/">home</Link>
+            <Link to="/Cart">cart</Link>
         </li>
         <li >
-            <Link to="/">home</Link>
+            <Link to="/Whishlist">whishlist</Link>
+        </li>
+        <li >
+            <Link to="/CheckOut">CheckOut</Link>
         </li>
     </ul>
 </nav>
