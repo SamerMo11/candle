@@ -1,4 +1,5 @@
 import "../Css/Home.css"
+import "../Responsive/home.css"
 import {servs1 ,servs2} from "../Datas/home/servs"
 import {categories} from "../Datas/home/categories"
 
@@ -31,8 +32,8 @@ export default function Home(){
 {/* --------------------------- */}
 
         <div className="welcome">
-            <img src={wleft} alt="welcomeleft" loading="lazy"/>
-            <img src={wright} alt="welcomeright" loading="lazy"/>
+            <div><img src={wleft} alt="welcomeleft" loading="lazy"/></div>
+            <div><img src={wright} alt="welcomeright" loading="lazy"/></div>
             <p>
             welcome to borcelle candle
             </p>
@@ -63,11 +64,11 @@ export default function Home(){
             <div className="catCards">
             {
                     categories.map((catData, index) => (
-                        <div className="catCard" key={index}>
+                        <a href="#" className="catCard" key={index}>
                 <img src={catData.img} alt="about2Img" loading="lazy"/>
                 <p>{catData.title}</p>
                             
-            </div>
+            </a>
                         ))
                     }
 

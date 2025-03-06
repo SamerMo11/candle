@@ -1,0 +1,194 @@
+@media (max-width:767px) {
+
+    .home {
+        flex-direction: column;
+        height: auto;
+        padding-block: 5vw;
+
+    }
+    .home .heroText {
+        width: 100%;
+        padding-top: 0;
+        gap: 5vw;
+    }
+    .home img {
+        width: 100%;
+        border-top-left-radius: 200px;
+        border-top-right-radius: 200px;
+    }
+    .home .heroText h1 {
+        font-size: clamp(1rem, 10vw, 5rem);
+        width: 95%;
+    }
+    .home .heroText p {
+        font-size: clamp(1rem, 6vw, 5rem);
+        width: 95%;
+    }
+    .welcome{
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: space-between;
+    }
+    .welcome p:nth-child(3){
+        order: 1;
+    }
+    .welcome p:nth-child(3),
+    .welcome p:nth-child(4) {
+        font-size: clamp(1rem, 11vw, 5rem);
+        text-align: center;
+        width: 100%;
+        padding-inline: 5%;
+    }
+    .welcome p:nth-child(4) {
+        font-size: clamp(1rem, 4vw, 5rem);
+        line-height: 20px;
+        order: 2;
+
+    }
+    .welcome > div {
+        position: relative;
+        width: 45%;
+        height: 25vw;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .welcome > div img{
+        width: 50%;
+        height: 100%;
+    }
+    .welcome > div:nth-child(1){
+        order: 3;
+    }
+    .welcome > div:nth-child(2){
+        order: 4;
+        justify-content: end;
+    }
+    .about{
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        padding-block: 5vw;
+        gap: 10vh;
+    }
+    .about .imgs {
+        justify-content: center;
+        width: 100%;
+    }
+    .about .imgs img:nth-child(1) {
+        top: 0%;
+        left: 5%;
+    }
+    .about .text {
+        width: 90%;
+        gap: 10px;
+    }
+    .about .text p:nth-child(1) {
+        font-size: clamp(1rem, 10vw, 4rem);
+    }
+    .about .text p:nth-child(2) {
+        font-size: clamp(1rem, 8vw, 4rem);
+    }
+    .about .text p:nth-child(3) {
+        font-size: clamp(1rem, 6vw, 4rem);
+        line-height: 7vw;
+    }
+    .categ{
+        height: auto;
+    }
+    .categ > p {
+        font-size: clamp(1rem, 10vw, 4rem);
+    }
+    .categ .catCards {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .categ .catCard {
+        width: 100%;
+        padding: 20px;
+        height: 100vw;
+    }
+    .categ .catCard img {
+        width: 60%;
+        height: 80%;
+    }
+    .categ .catCard p {
+        font-size: clamp(1rem, 7vw, 4rem);
+    }
+    .servs{
+        height: auto;
+    }
+    .servs > p {
+        font-size: clamp(1rem, 10vw, 4rem);
+    }
+    .servs .servCards {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 10vw;
+    }
+    .servs .servCards > img {
+        width: 45%;
+        height: 40vw;
+    }
+    .servs .servCards .col {
+        width: 44%;
+        gap: 10vw;
+    }
+    .servs .servCards .col1 {
+        order: 2;
+    }
+    .servs .servCards .col1 {
+        order: 3;
+    }
+    .servs .servCards .col .serv {
+        width: 100%;
+        height: 35vw;
+    }
+    .servs .servCards .col .serv img {
+        width: clamp(5vw, 10vw, 20vw);
+        height: clamp(5vw, 10vw, 30vw);
+    }
+
+    .servs .servCards .col .serv p:nth-child(2){
+        font-size: clamp(1rem, 5vw, 4rem);
+    }
+    .servs .servCards .col .serv p:nth-child(3){
+        font-size: clamp(.5rem, 3vw, 4rem);
+        line-height: 4vw;
+    }
+    .servs .servCards .col .serv p {
+        width: 100%;
+    }
+    .contact{
+        height: auto;
+    }
+    .contact > p:nth-child(1) {
+        font-size: clamp(1rem, 10vw, 4rem);
+    }
+    .contact p:nth-child(2) {
+        font-size: clamp(1rem, 5vw, 4rem);
+        line-height: 7vw;
+        width: 100%;
+    }
+    .contact .inputs {
+        width: 100%;
+        justify-content: center;
+    }
+    .contact .inputs input:not(:last-child) {
+        font-size: clamp(.5rem, 5vw, 4rem);
+        width: 100%;
+        height: 15vw;
+    }
+    .contact .inputs textarea {
+        font-size: clamp(.5rem, 5vw, 4rem);
+    }
+    .contact .inputs input:last-child {
+        font-size: clamp(1rem, 5vw, 4rem);
+    }
+}
