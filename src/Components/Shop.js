@@ -1,4 +1,6 @@
 import "../Css/Shop.css";
+import "../Responsive/shop.css"
+
 import { useState, useEffect } from "react";
 import span from "../Assets/shop/span.webp";
 import { cat1 } from "../Datas/colls/cat1";

@@ -1,0 +1,29 @@
+@media (max-width:767px) {
+
+    .collCont {
+
+        gap: 5vh;
+    }
+
+    .catCont {
+        flex-wrap: wrap;
+        height: 20vh;
+    }
+    .catBtn {
+        width: 50%;
+        height: 50%;
+        font-size: clamp(1rem, 5vw, 4rem);
+        /* box-shadow: inset 0px -4px 4px 0px #00000040; */
+    }
+    .catBtn.active {
+        box-shadow: 0px -4px 4px 0px #00000040 inset;
+    }
+
+    .title {
+        font-size: clamp(1rem, 8vw, 4rem);
+    }
+    .colls {
+        width: 90%;
+        flex-direction: column;
+    }
+}
