@@ -48,24 +48,24 @@
             & > .add {
                 width: 100%;
                 padding-inline: 0;
-            }
-        }
-    }
-    .collCard {
-        & .top {
-            & > .add {
-                & > p {
-                    font-size: clamp(1rem, 5vw, 4rem);
+
+                & button {
+                    & i {
+                        font-size: clamp(1rem, 5vw, 5rem);
+                    }
                 }
             }
+            > p {
+                font-size: clamp(1rem, 5vw, 4rem);
+            }
         }
     }
+    
     .collCard {
         & .bottom {
             & div:nth-child(1) {
                 p {
                     font-size: clamp(1rem, 5vw, 4rem);
-
                 }
             }
         }
@@ -82,15 +82,5 @@
     }
     
     
-.collCard {
-    & .top {
-        & > .add {
-            & button {
-                i {
-                    font-size: clamp(1rem, 6vw, 5rem);
-                }
-            }
-        }
-    }
-}
+
 }
