@@ -65,19 +65,21 @@ export default function Home(){
             <div className="catCards">
             {
                     categories.map((catData, index) => (
+                        
                         <a href="/Shop" className="catCard" key={index}>
-                        <a href="" className="catCard" key={index}>
                 <img src={catData.img} alt="about2Img" loading="lazy"/>
                 <p>{catData.title}</p>
                             
             </a>
-                        ))
+                        )
+                    )
                     }
+        </div>
+</div>
 
 
-               
-        </div>
-        </div>
+
+
 {/* --------------------------- */}
 
 
@@ -129,10 +131,8 @@ export default function Home(){
                 </div>
             </div>
 
-
-
-
+    
         </div>
-        
+                
     )
 }
