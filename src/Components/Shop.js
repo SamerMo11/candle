@@ -83,14 +83,12 @@ export default function Shop() {
                                     </div>
                                     <div>
                                         <p>add to cart</p>
-                                        <div className="icons">
+                                        {/* <div className="icons"> */}
                                             <button onClick={() => toggleWishlist(collData)}>
                                                 <i className="fa-solid fa-heart" style={{ color: isInWishlist ? "red" : "white" }}></i>
                                             </button>
-                                            <button>
-                                                <i className="fa-regular fa-bag-shopping"></i>
-                                            </button>
-                                        </div>
+                                            
+                                        {/* </div> */}
                                     </div>
                                 </div>
                                 <div className="bottom">

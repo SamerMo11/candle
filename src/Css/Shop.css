@@ -126,11 +126,7 @@
             height: 12%;
             padding-inline: 30px;
 
-            .icons{
-                width: 25%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            
                 button{
                     border: none;
                     background:none;
@@ -141,7 +137,7 @@
                         color: var(--f);
                     }
                 }
-            }
+            
             > p{
                 text-transform: capitalize;
                 color: var(--fonts);
