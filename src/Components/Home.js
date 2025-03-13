@@ -27,6 +27,7 @@ export default function Home(){
                     finest candles made with tenderness and love
                     </p>
                     <a href="/Shop">shop now</a>
+                    <a href="">shop now</a>
                 </div>
             </div>
 {/* --------------------------- */}
@@ -65,6 +66,7 @@ export default function Home(){
             {
                     categories.map((catData, index) => (
                         <a href="/Shop" className="catCard" key={index}>
+                        <a href="" className="catCard" key={index}>
                 <img src={catData.img} alt="about2Img" loading="lazy"/>
                 <p>{catData.title}</p>
                             
@@ -131,5 +133,6 @@ export default function Home(){
 
 
         </div>
+        
     )
 }
