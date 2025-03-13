@@ -27,7 +27,7 @@ export default function Home(){
                     finest candles made with tenderness and love
                     </p>
                     <a href="/Shop">shop now</a>
-                    <a href="">shop now</a>
+                    <a href="/Shop">shop now</a>
                 </div>
             </div>
 {/* --------------------------- */}
