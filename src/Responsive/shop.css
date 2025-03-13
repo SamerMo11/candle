@@ -45,8 +45,16 @@
     }
     .collCard {
         & .top {
-            & > div {
-                > p {
+            & > .add {
+                width: 100%;
+                padding-inline: 0;
+            }
+        }
+    }
+    .collCard {
+        & .top {
+            & > .add {
+                & > p {
                     font-size: clamp(1rem, 5vw, 4rem);
                 }
             }
@@ -72,17 +80,11 @@
             }
         }
     }
-    .collCard {
-        & .top {
-            > div {
-                height: 15%;
-            }
-        }
-    }
+    
     
 .collCard {
     & .top {
-        & > div {
+        & > .add {
             & button {
                 i {
                     font-size: clamp(1rem, 6vw, 5rem);
