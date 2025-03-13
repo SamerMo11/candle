@@ -86,7 +86,6 @@
             & button {
                 i {
                     font-size: clamp(1rem, 6vw, 5rem);
-
                 }
             }
         }

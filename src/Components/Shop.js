@@ -81,7 +81,7 @@ export default function Shop() {
                                     <div className="topImg">
                                         <img src={collData.img} alt="CollectionImg" loading="lazy" />
                                     </div>
-                                    <div>
+                                    <div className="add">
                                         <p>add to cart</p>
                                         {/* <div className="icons"> */}
                                             <button onClick={() => toggleWishlist(collData)}>
