@@ -126,7 +126,7 @@
             font-size: 19px;
             color: var(--f);
         }
-        .collCard .add > p{
+        .collCard .top .add  p{
             text-transform: capitalize;
             color: var(--fonts);
             font-size: 19px;
