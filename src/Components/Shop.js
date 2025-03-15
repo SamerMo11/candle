@@ -19,7 +19,7 @@ export default function Shop() {
     const [activeCategory, setActiveCategory] = useState(categories[0]);
     const [activeBtn, setActiveBtn] = useState(0);
     const [wishlist, setWishlist] = useState([]);
-    const [cart, setCart] = useState([]);
+    const [, setCart] = useState([]);
 
     useEffect(() => {
         const savedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];

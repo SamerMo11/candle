@@ -81,11 +81,11 @@ export default function Cart() {
                     ))}
                 </div>
 
-                {/* {cartItems.length > 0 && (
+                {cartItems.length > 0 && (
                     <div className="totalCart">
                         <h3>Total: {totalPrice} LE</h3>
                     </div>
-                )} */}
+                )}
             </div>
         </div>
     );
