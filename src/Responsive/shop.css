@@ -43,44 +43,26 @@
         width: 60vw;
         height: 90vw;
     }
-    .collCard {
-         .top {
-            > .add {
+    .collCard .top .add {
                 width: 100%;
                 padding-inline: 0;
-
-                 button {
-                     i {
+    }
+    .collCard .top .add  button i {
                         font-size: clamp(1rem, 5vw, 5rem);
                     }
                 }
-            }
-            > p {
+            
+                .collCard .top .add p {
                 font-size: clamp(1rem, 5vw, 4rem);
             }
-        }
-    }
+
     
-    .collCard {
-         .bottom {
-             div:nth-child(1) {
-                p {
+    .collCard .bottom div:nth-child(1) p {
                     font-size: clamp(1rem, 5vw, 4rem);
                 }
-            }
-        }
-    }
-    .collCard {
-         .bottom {
-             .stars {
-                i {
+
+    .collCard .bottom .stars i {
                     color: #FBB500;
                     font-size: clamp(1rem, 4vw, 3rem);
                 }
-            }
-        }
-    }
-    
-    
 
-}
