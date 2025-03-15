@@ -1,4 +1,4 @@
-.whishPage{
+.whishPage {
     width: 90%;
     min-height: 100vh;
     max-height: auto;
@@ -8,83 +8,76 @@
     flex-direction: column;
     gap: 5vh;
     margin-top: 10vh;
-
-    .top{
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-        p{
-            text-transform: capitalize;
-            color: #584536;
-            font-size: 25px;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 10px;
-            width: 50%;
-            height: 100%;
-
-            img{
-                width: 7%;
-                height: 100%;
-                object-fit: contain;
-            }
-        
-            span{
-                color: #6F5743B2;
-            }
-
-        }
-
-        .backShop{
-            width: 100%;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            
-
-                    
-            }
-
-
-            a{
-                text-decoration: none;
-                text-transform: capitalize;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                border: 1px solid #584536;
-                border-radius: 10px;
-                color: #584536;
-                font-size: 21px;
-                padding: 10px 20px;
-            }
-        }
-    
-
-
-        .cont{
-            width: 100%;
-            min-height: 70vh;
-            max-height: auto;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 50px;
-            padding: 50px 0px;
-            background-color: #BFA7953B;
-            border-radius: 10px;
-        }
 }
 
+.whishPage .top {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.whishCard{
+.whishPage .top p {
+    text-transform: capitalize;
+    color: #584536;
+    font-size: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.whishPage .top p img {
+    width: 7%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.whishPage .top p span {
+    color: #6F5743B2;
+}
+
+.whishPage .top .backShop {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.whishPage .top a {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #584536;
+    border-radius: 10px;
+    color: #584536;
+    font-size: 21px;
+    padding: 10px 20px;
+}
+
+.whishPage .cont {
+    width: 100%;
+    min-height: 70vh;
+    max-height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px 0px;
+    background-color: #BFA7953B;
+    border-radius: 10px;
+}
+
+/* ------- whishCard ------- */
+
+.whishCard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,103 +85,103 @@
     width: 18%;
     height: 400px;
     position: relative;
-    .top{
-        width: 100%;
-        height: 85%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 15px;
-        overflow: hidden;
-
-        .topImg{
-            width: 100%;
-            height: 88%;
-            overflow: hidden;
-        img{
-            width: 100%;
-            height:100%;
-            transition: .5s;
-            /* object-fit: cover; */
-        }
-    }
-        > div{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #B29B8A99;
-            width: 90%;
-            height: 12%;
-            padding-inline: 30px;
-
-            
-
-                button{
-                    position: absolute;
-                    top: -10px;
-                    right: -10px;
-                    border: none;
-                    background: var(--fonts);
-                    width: 28px;
-                    height: 28px;
-                    border-radius: 50%;
-                    padding: 5px;
-                    cursor: pointer;
-                    i{
-                        font-size: 19px;
-                        color: var(--f);
-                    }
-                
-            }
-            > p{
-                text-transform: capitalize;
-                color: var(--fonts);
-                font-size: 19px;
-            }
-        }
-    }
-    
-    .bottom{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        height: 15%;
-        width: 100%;
-
-        div:nth-child(1){
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-            height: 50%;
-            p{
-                color: var(--fonts);
-                text-transform: capitalize;
-                font-size: 22px;
-            }
-        }
-        .stars{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* gap: 10px; */
-            width: 100%;
-
-            
-            i{
-                color: #FBB500;
-                font-size: 18px;
-            }
-        }
-    }
 }
 
+.whishCard .top {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+}
 
+.whishCard .top .topImg {
+    width: 100%;
+    height: 88%;
+    overflow: hidden;
+}
 
+.whishCard .top .topImg img {
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    /* object-fit: cover; */
+}
 
+.whishCard .top > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B29B8A99;
+    width: 90%;
+    height: 12%;
+    padding-inline: 30px;
+    /* position: relative; */
+}
 
+.whishCard .top > div button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border: none;
+    background: var(--fonts);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.whishCard .top > div button i {
+    font-size: 19px;
+    color: var(--f);
+}
 
+.whishCard .top > div > p {
+    text-transform: capitalize;
+    color: var(--fonts);
+    font-size: 19px;
+}
 
+/* ------- bottom ------- */
+
+.whishCard .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 15%;
+    width: 100%;
+}
+
+.whishCard .bottom div:nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.whishCard .bottom div:nth-child(1) p {
+    color: var(--fonts);
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
+.whishCard .bottom .stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.whishCard .bottom .stars i {
+    color: #FBB500;
+    font-size: 18px;
+}

@@ -130,6 +130,7 @@
             text-transform: capitalize;
             color: var(--fonts);
             font-size: 19px;
+            cursor: pointer;
         }
         .collCard .top{
             width: 100%;

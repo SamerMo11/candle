@@ -1,0 +1,86 @@
+@media (max-width:767px) {
+    .whishPage > .top {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 5vw;
+    }
+    .whishPage .top p {
+        width: 100%;
+        font-size: clamp(.5rem, 6vw, 3rem);
+        justify-content: center;
+    }
+    .whishPage .top a {
+        gap: 10px;
+        font-size: clamp(.5rem, 5vw, 4rem);
+    }
+
+
+    .whishCard {
+        width: 60vw;
+        height: 90vw;
+    }
+    .whishCard .top .add {
+                width: 100%;
+                padding-inline: 0;
+    }
+    
+    .whishCard .top .add  button i {
+                        font-size: clamp(1rem, 5vw, 5rem);
+                    }
+                    .whishCard .top > div button {
+                        width: clamp(1rem, 8vw, 3rem);
+                        height: clamp(1rem, 8vw, 3rem);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .whishCard .top > div button i {
+                        font-size: clamp(.5rem, 5vw, 3rem);
+                    }
+                    
+                    .whishCard .top .add p {
+                font-size: clamp(1rem, 5vw, 4rem);
+            }
+
+            
+            .whishCard .bottom div:nth-child(1) p {
+                font-size: clamp(1rem, 5vw, 4rem);
+                }
+
+                .whishCard .bottom .stars i {
+         color: #FBB500;
+         font-size: clamp(1rem, 4vw, 3rem);
+                }
+                
+                
+                
+                
+            }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

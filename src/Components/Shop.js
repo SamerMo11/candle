@@ -19,10 +19,14 @@ export default function Shop() {
     const [activeCategory, setActiveCategory] = useState(categories[0]);
     const [activeBtn, setActiveBtn] = useState(0);
     const [wishlist, setWishlist] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         const savedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
         setWishlist(savedWishlist);
+
+        const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+        setCart(savedCart);
     }, []);
 
     const toggleWishlist = (item) => {
@@ -41,6 +45,28 @@ export default function Shop() {
 
         setWishlist(savedWishlist);
         localStorage.setItem("wishlist", JSON.stringify(savedWishlist));
+    };
+
+    // ✅ function to add item to cart
+    const addToCart = (item) => {
+        let savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+        const exists = savedCart.some(
+            (cItem) => cItem.key === item.key && cItem.category === activeCategory.name
+        );
+
+        if (!exists) {
+            savedCart.push({ ...item, category: activeCategory.name, qty: 1 });
+        } else {
+            savedCart = savedCart.map((cItem) => {
+                if (cItem.key === item.key && cItem.category === activeCategory.name) {
+                    return { ...cItem, qty: cItem.qty + 1 }; // لو المنتج موجود زود الكمية
+                }
+                return cItem;
+            });
+        }
+
+        setCart(savedCart);
+        localStorage.setItem("cart", JSON.stringify(savedCart));
     };
 
     return (
@@ -82,13 +108,13 @@ export default function Shop() {
                                         <img src={collData.img} alt="CollectionImg" loading="lazy" />
                                     </div>
                                     <div className="add">
-                                        <p>add to cart</p>
-                                        {/* <div className="icons"> */}
-                                            <button onClick={() => toggleWishlist(collData)}>
-                                                <i className="fa-solid fa-heart" style={{ color: isInWishlist ? "red" : "white" }}></i>
-                                            </button>
-                                            
-                                        {/* </div> */}
+                                        <p onClick={() => addToCart(collData)}>add to cart</p>
+                                        <button onClick={() => toggleWishlist(collData)}>
+                                            <i
+                                                className="fa-solid fa-heart"
+                                                style={{ color: isInWishlist ? "red" : "white" }}
+                                            ></i>
+                                        </button>
                                     </div>
                                 </div>
                                 <div className="bottom">
