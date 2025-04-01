@@ -3,7 +3,7 @@ import "../Responsive/home.css"
 import {servs1 ,servs2} from "../Datas/home/servs"
 import {categories} from "../Datas/home/categories"
 import { Link } from "react-router-dom";
-import { delay, motion, transform } from "framer-motion";
+import {  motion } from "framer-motion";
 
 import hero from "../Assets/home/hero.webp"
 import wleft from "../Assets/home/welcome/wleft.webp"
@@ -13,7 +13,7 @@ import servcenter from "../Assets/home/servs/center.webp"
 import about1 from "../Assets/home/about/about1.webp"
 import about2 from "../Assets/home/about/about2.webp"
 import { useNavigate } from "react-router-dom";
-import { type } from "@testing-library/user-event/dist/type";
+// import { type } from "@testing-library/user-event/dist/type";
 // import { stagger } from "framer-motion/dom";
 
 

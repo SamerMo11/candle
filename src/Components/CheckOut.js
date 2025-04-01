@@ -1,6 +1,5 @@
 import "../Css/CheckOut.css";
 import { Link } from "react-router-dom";
-import test from "../Assets/shop/cat1/1.webp";
 import { useEffect, useState } from "react";
 
 
