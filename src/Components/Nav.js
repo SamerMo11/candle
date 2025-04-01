@@ -43,15 +43,15 @@ return (
         <li >
             <Link to="/" onClick={() => handleScroll("home-section")}>home</Link>
         </li>
-        
-        <li >
-            <Link to="/#" onClick={() => handleScroll("contact-section")} >contact</Link>
-        </li>
         <li >
             <Link to="/#" onClick={() => handleScroll("about-section")} >about</Link>
         </li>
         <li >
             <Link to="/#" onClick={() => handleScroll("cat-section")} >categories</Link>
+        </li>
+        
+        <li >
+            <Link to="/#" onClick={() => handleScroll("contact-section")} >contact</Link>
         </li>
         <li >
             <Link to="/Shop" onClick={() => handleScroll("shop-section")}>shop</Link>

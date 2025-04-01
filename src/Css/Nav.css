@@ -63,6 +63,22 @@ nav .links{
 nav .links li {
     list-style: none;
     height: 100%;
+    position: relative;
+    /* padding-inline: 10px; */
+}
+nav .links li::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--btns);
+    transition: width .5s;
+}
+nav .links li:hover::before{
+    width: 100%;
 }
 nav .links a {
     height: 100%;
