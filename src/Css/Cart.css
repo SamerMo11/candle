@@ -1,13 +1,13 @@
 .cartPage {
     width: 90%;
     min-height: 100vh;
-    max-height: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10vh;
-    margin-top: 15vh;
+    padding-top: 20vh;
 }
 
 .cartPage .backShop {
@@ -126,6 +126,7 @@
 .cartPage .mainCont .prodsCont  .price1 {
     width: 18%;
     text-align: start;
+    text-transform: uppercase;
 }
 
 .cartPage .mainCont .prodsCont  .price2 {
@@ -157,9 +158,110 @@
 
 .cartPage .mainCont .prodsCont  i {
     font-size: 24px;
+    cursor: pointer;
     color: var(--fonts);
     position: absolute;
     top: 50%;
     left: 99%;
     transform: translate(-50%, -50%);
+}
+
+.cartPage .payment{
+    width: 90%;
+    background-color: #BFA7953B;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5%;
+}
+.cartPage .payment .choose{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 2vh;
+}
+.cartPage .payment .choose p{
+    color: #584536;
+    text-transform: capitalize;
+    font-size: 22px;
+
+}
+.cartPage .payment .choose .on{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.cartPage .payment .choose  label{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    /* text-transform: capitalize; */
+    color: var(--fonts);
+}
+.cartPage .payment .choose  label input{
+    width: 24px;
+    height: 24px;
+}
+.cartPage .payment .choose > label{
+    width: 46%;
+}
+.cartPage .payment .choose .on .payImgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.cartPage .payment .choose .on .payImgs img{
+    width: 42px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+
+.cartPage .payment .prices{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.cartPage .payment .prices > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--fonts);
+}
+.cartPage .payment .prices > div p{
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.cartPage .payment .prices > div span{
+    font-size: 25px;
+}
+.cartPage .payment .prices > span{
+    width: 100%;
+    height: 1px ;
+    background-color: #6F574347;
+}
+.cartPage .payment .prices a{
+    text-transform: capitalize;
+    color: var(--f);
+    font-size: 23px;
+    text-decoration: none;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #B29B8A99;
+    border-radius: 10px;
 }

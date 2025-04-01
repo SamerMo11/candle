@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Shop from "./Components/Shop";
 import Cart from "./Components/Cart";
@@ -18,6 +19,8 @@ function App() {
     <Route path="/Whishlist" element={<Whishlist />} />
     <Route path="/CheckOut" element={<CheckOut />} />
     </Routes>
+    <Footer/>
+
   </Router>
   )
 }

@@ -20,7 +20,7 @@ export default function Whishlist() {
     };
 
     return (
-        <div className="whishPage">
+        <div className="whishPage" id="whish-section">
             <div className="top">
                 <p>
                     <img src={span} alt="span" loading="lazy"/>

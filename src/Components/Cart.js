@@ -1,9 +1,16 @@
 import "../Css/Cart.css"
 import "../Responsive/cart.css"
-import { Link } from "react-router-dom";
+import pay1 from "../Assets/payment/1.webp"
+import pay2 from "../Assets/payment/2.webp"
+import pay3 from "../Assets/payment/3.webp"
+import pay4 from "../Assets/payment/4.webp"
+
+import { Link , useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function Cart() {
+
+    
     const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
@@ -37,8 +44,18 @@ export default function Cart() {
         return acc + (parseInt(item.price) * item.qty);
     }, 0);
 
+
+
+    const navigate = useNavigate();
+
+    const goToCheckout = () => {
+        localStorage.setItem("checkoutItems", JSON.stringify(cartItems));
+        navigate("/CheckOut");
+    };
+
+
     return (
-        <div className="cartPage">
+        <div className="cartPage" id="cart-section">
             <div className="backShop">
                 <Link to="/Shop">
                     <i className="fa-regular fa-arrow-left"></i>
@@ -81,12 +98,65 @@ export default function Cart() {
                     ))}
                 </div>
 
-                {cartItems.length > 0 && (
+
+
+                {/* {cartItems.length > 0 && (
                     <div className="totalCart">
                         <h3>Total: {totalPrice} LE</h3>
                     </div>
-                )}
+                )} */}
             </div>
+
+                <div className="payment">
+                    <div className="choose">
+                        <p>choose pay mode:</p>
+                        <div className="on">
+                            <label>
+                            <input type="radio"/>
+                            Online
+                            </label>
+                            <div className="payImgs">
+                                <img src={pay1} alt="PayImage" loading="lazy"/>
+                                <img src={pay2} alt="PayImage" loading="lazy"/>
+                                <img src={pay3} alt="PayImage" loading="lazy"/>
+                                <img src={pay4} alt="PayImage" loading="lazy"/>
+                            </div>
+                        </div>
+                        <label>
+                            <input type="radio"/>
+                            Cash on delivery
+                            </label>
+                    </div>
+
+                    <div className="prices">
+                {cartItems.length > 0 && (
+
+                        <div>
+                            <p>subtotal:</p>
+                            <span>{totalPrice} LE</span>
+                        </div>
+                )}
+
+                        <div>
+                            <p>shipping:</p>
+                            <span>0 LE</span>
+                        </div>
+                        <span></span>
+                {cartItems.length > 0 && (
+                        
+                        <div>
+                            <p>total:</p>
+                            <span>{totalPrice} LE</span>
+                        </div>
+                )}
+
+                        <a href="/CheckOut" onClick={goToCheckout}>checkOut</a>
+                    </div>
+                </div>
+
+
+
+
         </div>
     );
 }

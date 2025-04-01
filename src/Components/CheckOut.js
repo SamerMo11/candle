@@ -1,8 +1,30 @@
 import "../Css/CheckOut.css";
 import { Link } from "react-router-dom";
+import test from "../Assets/shop/cat1/1.webp";
+import { useEffect, useState } from "react";
 
 
 export default function CheckOut() {
+
+
+    const [orderItems, setOrderItems] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
+
+    useEffect(() => {
+        const savedOrder = JSON.parse(localStorage.getItem("checkoutItems")) || [];
+        setOrderItems(savedOrder);
+
+        const total = savedOrder.reduce((acc, item) => acc + (parseInt(item.price) * item.qty), 0);
+        setTotalPrice(total);
+    }, []);
+
+
+
+
+
+
+
+
     return(
         <div className="checkPage">
                 <div className="backCart">
@@ -30,10 +52,44 @@ export default function CheckOut() {
                         </label>
                     </div>
                 </div>
-                <div></div>
+
+
+
+                <div className="order">
+                    <p>my order</p>
+                    <div className="prods">
+                    {orderItems.map((item, index) => (
+                    <div className="prod" key={index}>
+                        <img src={item.img} alt={item.title} loading="lazy"/>
+                        <p>{item.title}</p>
+                        {/* <p>Qty: {item.qty}</p> */}
+                        {/* <p>Price: {item.price} LE</p> */}
+                    </div>
+                ))}
+                    </div>
+
+                    <div className="prices">
+                        <div>
+                            <p>subtotal:</p>
+                            <span>{totalPrice} LE</span>
+                        </div>
+                        <div>
+                            <p>shipping:</p>
+                            <span>0 LE</span>
+                        </div>
+                        <span></span>
+                        
+                        <div>
+                            <p>total:</p>
+                            <span>{totalPrice} LE</span>
+                        </div>
+
+                </div>
+                <a href="/CheckOut">checkOut</a>
+
             </div>
+    
+        </div>
         </div>
     )
-
-
 }

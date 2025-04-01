@@ -1,4 +1,4 @@
-.checkPage{
+.checkPage {
     width: 90%;
     min-height: 100vh;
     max-height: auto;
@@ -7,81 +7,208 @@
     align-items: center;
     flex-direction: column;
     gap: 10vh;
-
-    .backCart{
-        width: 100%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-            a{
-        /* width: 250px; */
-        text-decoration: none;
-        text-transform: capitalize;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        border: 1px solid #584536;
-        border-radius: 10px;
-        color: #584536;
-        font-size: 21px;
-        padding: 10px 20px;
-        }
-    }
+    padding-block: 10vh;
 }
-.checkCont{
+
+.checkPage .backCart {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.checkPage .backCart a {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #584536;
+    border-radius: 10px;
+    color: #584536;
+    font-size: 21px;
+    padding: 10px 20px;
+}
+
+.checkCont {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .pay{
-        width: 30%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-        gap: 3vh;
-            >p{
-                font-size: 30px;
-                color: #584536;
-                text-transform: capitalize;
-            }
-
-                select,
-                input{
-                    width: 100%;
-                    height: 50px;
-                    border: 1px solid var(--fonts);
-                    border-radius: 10px;
-                    background-color: #BFA7951A;
-                    font-size: 14px;
-                    padding-left: 20px;
-                    color: #6F574380;
-                }
-                select{
-                    width: 50%;
-                    padding: 10px;
-                }
-                    .checkBox{
-                        width: 90%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                            >input{
-                                width: 24px;
-                                height: 24px;
-                                border-radius: 4px;
-                                border: 1px solid red;
-                                background-color: red;
-                            }
-                                label{
-                                    color: var(--fonts);
-                                    font-size: 15px;
-                                }
-                    }
-    }
 }
+
+.checkCont .pay {
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.checkCont .pay > p {
+    font-size: 30px;
+    color: #584536;
+    text-transform: capitalize;
+}
+
+.checkCont .pay select,
+.checkCont .pay input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--fonts);
+    border-radius: 10px;
+    background-color: #BFA7951A;
+    font-size: 14px;
+    padding-left: 20px;
+    color: #6F574380;
+}
+
+.checkCont .pay select {
+    width: 50%;
+    padding: 10px;
+}
+
+.checkCont .pay .checkBox {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkCont .pay .checkBox > input {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid red;
+    background-color: red;
+}
+
+.checkCont .pay .checkBox label {
+    color: var(--fonts);
+    font-size: 15px;
+}
+
+
+.checkCont .order{
+    width: 35%;
+    height: auto;
+    background-color: #BFA7953B;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-inline: 5%;
+    padding-block: 20px;
+    border-radius: 15px;
+    gap: 5vh;
+}
+.checkCont .order > p{
+    text-transform: capitalize;
+    color: #584536;
+    font-size: 25px;
+}
+.checkCont .order .prods{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 25px;
+}
+.checkCont .order .prods > *{
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+}
+.checkCont .order .prods .prod{
+    /* width: 25%; */
+    flex: 0 0 27%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.checkCont .order .prods .prod img{
+    width: 100%;
+    height: 117px;
+    border-radius: 10px;
+}
+
+.checkCont .order .prods .prod p{
+    text-transform: capitalize;
+    color: var(--fonts);
+    font-size: 19px;
+}
+.checkCont .order .prices{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    gap: 2vh;
+}
+.checkCont .order .prices > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--fonts);
+}
+.checkCont .order .prices > div p{
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.checkCont .order .prices > div span{
+    font-size: 25px;
+}
+.checkCont .order .prices > span{
+    width: 100%;
+    height: 1px ;
+    background-color: #6F574347;
+}
+.checkCont .order  a{
+    text-transform: capitalize;
+    color: var(--f);
+    font-size: 23px;
+    text-decoration: none;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #B29B8A99;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width: 320px) {}
+
+@media (max-width: 767px) {}
+
+@media (min-width: 320px) and (max-width: 767px) {}
+
+@media (width: 767px) {}
+
+@media (width >= 320px) {}
+
+@media (width <= 767px) {}
+
+@media ( 320px <= width <= 767px) {}
+
+@media (width = 767px) {} */

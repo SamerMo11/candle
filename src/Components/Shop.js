@@ -71,7 +71,7 @@ export default function Shop() {
 
     return (
         <div className="shopPage">
-            <div className="shop">
+            <div className="shop" id="shop-section">
                 <p>our collections</p>
             </div>
             <div className="collCont">
