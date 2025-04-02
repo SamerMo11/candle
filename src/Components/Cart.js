@@ -46,23 +46,12 @@ export default function Cart() {
 
 
 
-    // const navigate = useNavigate();
-
-    // const goToCheckout = () => {
-    //     localStorage.setItem("checkoutItems", JSON.stringify(cartItems));
-    //     navigate("/CheckOut");
-    // };
     const navigate = useNavigate();
-    
-        const handleScroll = (sectionId) => {
-          navigate("/#"); // يرجع للصفحة الرئيسية
-          setTimeout(() => {
-            const section = document.getElementById(sectionId);
-            if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          }, 100); // تأخير بسيط لضمان تحميل الصفحة قبل التمرير
-        };
+
+    const goToCheckout = () => {
+        localStorage.setItem("checkoutItems", JSON.stringify(cartItems));
+        navigate("/CheckOut");
+    };
     const isMobile = window.innerWidth <= 768;
     
     const reveal =isMobile ? {} :{
@@ -176,7 +165,7 @@ export default function Cart() {
                         </div>
                 )}
 
-                        <Link to="/CheckOut"  onClick={() => handleScroll("check-section")}>checkOut</Link>
+                        <Link to="/CheckOut" onClick={goToCheckout}>checkOut</Link>
                     </div>
                 </div>
 

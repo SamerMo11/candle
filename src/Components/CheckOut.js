@@ -79,8 +79,6 @@ export default function CheckOut() {
                     <div className="prod" key={index}>
                         <img src={item.img} alt={item.title} loading="lazy"/>
                         <p>{item.title}</p>
-                        {/* <p>Qty: {item.qty}</p> */}
-                        {/* <p>Price: {item.price} LE</p> */}
                     </div>
                 ))}
                     </div>
@@ -102,7 +100,7 @@ export default function CheckOut() {
                         </div>
 
                 </div>
-                <a href="/CheckOut">checkOut</a>
+                <Link to="/">checkOut</Link>
 
             </div>
     
