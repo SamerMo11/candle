@@ -53,10 +53,10 @@ function Footer() {
                             <span>reemtawfik500@gmail.com</span>
                             <span>+20 236 733 567 25</span>
                             <div>
-                                <i class="fa-brands fa-facebook-f"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-instagram"></i>
-                                <i class="fa-brands fa-telegram"></i>
+                                <i className="fa-brands fa-facebook-f"></i>
+                                <i className="fa-brands fa-twitter"></i>
+                                <i className="fa-brands fa-instagram"></i>
+                                <i className="fa-brands fa-telegram"></i>
                             </div>
                         </div>
                 </div>

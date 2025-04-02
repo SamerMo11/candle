@@ -27,10 +27,10 @@ return (
 <nav>
     <div className="navTop">
         <div className="social">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-telegram"></i>
+        <i className="fa-brands fa-facebook-f"></i>
+        <i className="fa-brands fa-twitter"></i>
+        <i className="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-telegram"></i>
         </div>
     </div>
     <div className="navBottom">
@@ -60,13 +60,13 @@ return (
 
     <div className="icons">
         <Link to="/#">
-        <i class="fa-regular fa-user"></i>
+        <i className="fa-regular fa-user"></i>
         </Link>
         <Link to="/Cart" onClick={() => handleScroll("cart-section")}>
-        <i class="fa-regular fa-bag-shopping"></i>
+        <i className="fa-regular fa-bag-shopping"></i>
         </Link>
         <Link to="/Whishlist" onClick={() => handleScroll("whish-section")}>
-        <i class="fa-light fa-heart"></i>
+        <i className="fa-light fa-heart"></i>
         </Link>
     </div>
     </div>

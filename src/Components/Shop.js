@@ -98,12 +98,14 @@ export default function Shop() {
                 <p>our collections</p>
             </motion.div>
             <div className="collCont">
-                <div className="catCont">
+                <motion.div
+                variants={reveal} initial="hidden"     
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
+                className="catCont">
                     {categories.map((cat, index) => (
                         <motion.button
-                        variants={reveal} initial="hidden"     
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }}
+                        
                             key={index}
                             className={`catBtn ${activeBtn === index ? "active" : ""}`}
                             onClick={() => {
@@ -114,7 +116,7 @@ export default function Shop() {
                             {cat.name}
                         </motion.button>
                     ))}
-                </div>
+                </motion.div>
                 <motion.p
                 variants={reveal} initial="hidden"     
                 whileInView="visible"
