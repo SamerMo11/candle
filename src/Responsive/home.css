@@ -1,41 +1,5 @@
 @media (max-width:767px) {
-    nav .navBottom {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    nav .logo {
-        order: 1;
-        width: 25% ;
-        height: 50%;
-    }
-    nav .navBottom {
-        height: 25vw;
-    }
-    nav .navBottom .icons {
-        order: 2;
-        width: 50%;
-        justify-content: end;
-        /* gap: 10px; */
-    }
-    nav .navBottom .icons a i {
-        font-size: clamp(1vw, 5vw, 10vw);
-    }
-    nav .navBottom .links {
-        order: 3;
-        width: 100%;
-        height: 50%;
-    }
-    nav .navTop .social {
-        width: 100%;
-        justify-content: center;
-        gap: 15%;
-    }
-    nav .navTop .social i {
-        font-size: clamp(1vw, 5vw, 10vw);
-    }
-    nav .links a {
-        font-size: clamp(1vw, 5vw, 10vw);
-    }
+
     .home {
         flex-direction: column;
         height: auto;

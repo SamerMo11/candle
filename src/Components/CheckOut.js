@@ -1,4 +1,5 @@
 import "../Css/CheckOut.css";
+import "../Responsive/check.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -41,10 +42,11 @@ export default function CheckOut() {
         variants={reveal}
         initial="hidden"  
         animate="visible"
-        className="checkPage">
+        className="checkPage"
+        id="check-section">
                 <div className="backCart">
                         <Link to="/Cart" >
-                            <i class="fa-regular fa-arrow-left"></i>
+                            <i className="fa-regular fa-arrow-left"></i>
                             my cart
                         </Link>
                 </div>
@@ -62,7 +64,7 @@ export default function CheckOut() {
                     </select>
                     <div className="checkBox">
                         <input type="checkbox" id="check"/>
-                        <label for="check">
+                        <label htmlFor="check">
                         Save this information for faster check-out next time
                         </label>
                     </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Css/Footer.css"
+import '../Responsive/footer.css';
+
 import logo from "../Assets/logo.webp"
 import foot1 from "../Assets/foot1.webp"
 import foot2 from "../Assets/foot2.webp"

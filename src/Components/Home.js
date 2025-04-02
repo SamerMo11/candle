@@ -55,7 +55,7 @@ export default function Home(){
         visible:{
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
         transition:{
-            duration:1 , delay:.5
+            duration:2 , delay:.3
         },
     },
 };

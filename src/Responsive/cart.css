@@ -2,4 +2,114 @@
     .cartPage {
         padding-top: 40vw;
     }
+    .cartPage .backShop a {
+        gap: 10px;
+        font-size: clamp(.5rem, 5vw, 4rem);
+    }
+    .cartPage .mainCont .row {
+        width: 100%;
+        flex-wrap: wrap;
+        height: 20vw;
+    }
+    .cartPage .mainCont .row p:last-child ,
+    .cartPage .mainCont .row p:first-child ,
+    .cartPage .mainCont .row p {
+        text-align: center;
+        width: 50%;
+        font-size: clamp(1vw,7vw,10vw);
+    }
+    .cartPage .mainCont .prodsCont .prodCont {
+        width: 100%;
+        height: 60vw;
+        padding-right: 0;
+    }
+    .cartPage .mainCont .prodsCont i {
+        font-size: clamp(1vw, 8vw, 10vw);
+        top: 0%;
+        left: 100%;
+    }
+    .cartPage .mainCont .prodsCont .prodCont .product {
+        width: 50%;
+        height: 60%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+    }
+    .cartPage .mainCont .prodsCont .product img {
+        width: 75%;
+        height: 70%;
+    }
+    .cartPage .mainCont .prodsCont .product p {
+        font-size: clamp(1vw, 6vw, 10vw);
+        width: 100%;
+    }
+    .cartPage .mainCont .prodsCont .price1,
+    .cartPage .mainCont .prodsCont .price2 {
+        width: 45%;
+        text-align: center;
+        font-size: clamp(1vw, 6vw, 10vw);
+    }
+    .cartPage .mainCont .prodsCont .qty {
+        justify-content: space-evenly;
+        width: 50%;
+    }
+    .cartPage .payment {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding-inline: 0;
+        padding-block: 5vw;
+        gap: 5vw;
+    }
+    .cartPage .payment .choose {
+        width: 80%;
+        height: 30%;
+        align-items: self-start;
+    }
+    .cartPage .payment .choose p {
+        font-size: clamp(1vw, 7vw, 10vw);
+        width: 100%;
+        text-align: center;
+    }
+
+    .cartPage .payment .choose .on {
+        width: 100%;
+        height: 50%;
+        justify-content: space-between;
+    }
+    .cartPage .payment .choose .on .payImgs{
+        justify-content: space-between;
+        height: 25%;
+    }
+    .cartPage .payment .choose .on .payImgs img {
+        width: 20%;
+        height: 100%;
+    }
+    .cartPage .payment .choose .on label {
+        width: 35%;
+        font-size: clamp(1vw, 6vw, 10vw);
+    }
+    .cartPage .payment .choose label {
+        font-size: clamp(1vw, 6vw, 10vw);
+        width: 70%;
+
+    }
+    .cartPage .payment .choose label input {
+        width: clamp(1vw, 5vw, 10vw);
+        height: clamp(1vw, 5vw, 10vw);
+    }
+    .cartPage .payment .prices {
+        width: 85%;
+    }
+    .cartPage .payment .prices a {
+        font-size: clamp(1vw, 5vw, 10vw);
+        width: 65%;
+    }
+    .cartPage .payment .prices > div p {
+        font-size: clamp(1vw, 6vw, 10vw);
+    }
+    .cartPage .payment .prices > div span {
+        font-size: clamp(1vw, 6vw, 10vw);
+    }
+
 }

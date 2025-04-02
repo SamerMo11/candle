@@ -1,0 +1,71 @@
+@media (max-width: 767px) {
+    .checkPage {
+        padding-top: 40vw;
+    }
+    .checkPage .backCart a {
+        gap: 10px;
+        font-size: clamp(.5rem, 5vw, 4rem);
+    }
+    .checkCont {
+        flex-direction: column;
+        gap: 15vw;
+    }
+    .checkCont .order {
+        width: 100%;
+        align-items: center;
+        padding-inline: 0%;
+    }
+    .checkCont .order > p {
+        font-size: clamp(1vw, 8vw, 10vw);
+        width: 90%;
+        text-align: start;
+    }
+    .checkCont .order .prods {
+        width: 90%;
+    }
+    .checkCont .order .prods .prod {
+        flex: 0 0 45%;
+        gap: 2vw;
+    }
+    .checkCont .order .prods .prod p {
+        font-size: clamp(1vw, 5vw, 10vw);
+        text-align: center;
+        width: 100%;
+    }
+    .checkCont .order .prices > div p {
+        font-size: clamp(1vw, 6vw, 10vw);
+    }
+    .checkCont .order .prices > div span {
+        font-size: clamp(1vw, 6vw, 10vw);
+    }
+    .checkCont .order a {
+        font-size: clamp(1vw, 5vw, 10vw);
+        width: 65%;
+    }
+    .checkCont .pay {
+        width: 100%;
+        align-items: center;
+    }
+    .checkCont .pay > p {
+        font-size: clamp(1vw, 8vw, 10vw);
+    }
+    .checkCont .pay select, .checkCont .pay input {
+        font-size: clamp(1vw, 5vw, 10vw);
+        width: calc(100% - 10px);
+        padding-left: 10px;
+        }
+    .checkCont .pay select{
+        width: 100%;
+    }
+    .checkCont .pay .checkBox {
+        width: 100%;
+        gap: 20px;
+    }
+    .checkCont .pay .checkBox label {
+        font-size: clamp(1vw, 5vw, 6vw);
+    }
+    .checkCont .pay .checkBox > input {
+        width: clamp(1vw, 7vw, 10vw);
+        height: clamp(1vw, 7vw, 10vw);
+    }
+}
