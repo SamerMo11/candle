@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 import "../Css/Nav.css";
 import '../Responsive/nav.css';
@@ -7,27 +7,7 @@ import logo from "../Assets/logo.webp";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// مكونات لتأخير تحميل الصور
-const LazyImage = ({ src, alt, className }) => {
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    const img = document.querySelector(`.${className}`);
-    if (img) observer.observe(img);
-
-    return () => observer.disconnect();
-  }, [className]);
-
-  return isVisible ? <img src={src} alt={alt} className={className} /> : null;
-};
 
 function Nav() {
     const navigate = useNavigate();
