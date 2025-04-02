@@ -113,26 +113,26 @@ export default function Home(){
     const WelcomeImg1 ={
         hidden:{
             opacity: 0,
-            x:-40,
+            // x:-40,
         },
         visible:{
             opacity: 1,
-            x:0,
+            // x:0,
             transition: {
-                duration: 2, 
+                duration: 1, 
             },
         }
     }
     const WelcomeImg2 ={
         hidden:{
             opacity: 0,
-            x:40
+            // x:40
         },
         visible:{
             opacity: 1,
-            x:0,
+            // x:0,
             transition: {
-                duration: 2, 
+                duration: 1, 
                 
             },
         }
@@ -142,13 +142,13 @@ export default function Home(){
     const AboutImg1 ={
         hidden:{
             opacity: 0,
-            x:40,
+            // x:40,
         },
         visible:{
             opacity: 1,
-            x:0,
+            // x:0,
             transition: {
-                duration: 2, 
+                duration: 1, 
             },
         }
     }
@@ -342,7 +342,7 @@ export default function Home(){
         <motion.div
                     variants={reveal} initial="hidden"     
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
         
         className="categ" id="cat-section">
             <p>our categories</p>

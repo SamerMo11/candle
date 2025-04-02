@@ -1,6 +1,6 @@
 import "../Css/Whishlist.css";
 import "../Responsive/whishlist.css"
-
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import span from "../Assets/shop/span.webp";
@@ -19,8 +19,40 @@ export default function Whishlist() {
         localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
     };
 
+
+    const addToCart = (item) => {
+        const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        // التأكد إذا كان العنصر موجود بالفعل في السلة
+        const itemExists = savedCart.some(cartItem => cartItem.key === item.key && cartItem.category === item.category);
+    
+        if (!itemExists) {
+            savedCart.push({ ...item, qty: 1 });  // إضافة العنصر مع الكمية 1
+            localStorage.setItem("cart", JSON.stringify(savedCart));
+        }
+    
+        // يمكن إضافة رسالة أو تغيير الحالة هنا لإعلام المستخدم بأنه تم إضافة المنتج
+    };
+
+    
+    const reveal ={
+        hidden:{
+            opacity: 0,
+        },
+        visible:{
+            opacity: 1,
+            transition: {
+                duration: 2, 
+            },
+        }
+    }
+
     return (
-        <div className="whishPage" id="whish-section">
+        <motion.div
+        variants={reveal}
+        initial="hidden"  
+        animate="visible"
+        className="whishPage" id="whish-section">
             <div className="top">
                 <p>
                     <img src={span} alt="span" loading="lazy"/>
@@ -44,7 +76,7 @@ export default function Whishlist() {
                                     <img src={item.img} alt="WishlistImg" loading="lazy" />
                                 </div>
                                 <div>
-                                    <p>add to cart</p>
+                                    <p onClick={() => addToCart(item)}>add to cart</p>
                                     <button onClick={() => removeFromWishlist(item.title)}>
                                         <i className="fa-solid fa-xmark"></i>
                                     </button>
@@ -69,6 +101,6 @@ export default function Whishlist() {
                     <p className="empty-msg">Your wishlist is empty.</p>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 }

@@ -1,12 +1,13 @@
 import "../Css/Shop.css";
 import "../Responsive/shop.css"
-
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import span from "../Assets/shop/span.webp";
 import { cat1 } from "../Datas/colls/cat1";
 import { cat2 } from "../Datas/colls/cat2";
 import { cat3 } from "../Datas/colls/cat3";
 import { cat4 } from "../Datas/colls/cat4";
+import { useInView } from "react-intersection-observer";
 
 export default function Shop() {
     const categories = [
@@ -69,15 +70,40 @@ export default function Shop() {
         localStorage.setItem("cart", JSON.stringify(savedCart));
     };
 
+
+    const reveal ={
+        hidden:{
+            opacity: 0,
+            y:50
+        },
+        visible:{
+            opacity: 1,
+            y:0,
+            transition: {
+                duration: 1, 
+                staggerChildren:.3
+            },
+        }
+    }
+    
+    // const { ref, inView } = useInView({  threshold: 0.01, rootMargin: "350px 0px" });
+
     return (
         <div className="shopPage">
-            <div className="shop" id="shop-section">
+            <motion.div
+            initial={{clipPath: 'polygon(50% 0, 50% 0, 50% 100%, 50% 100%)'}}
+            animate={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'}}
+            transition={{duration:1 , delay:.3}}
+            className="shop" id="shop-section">
                 <p>our collections</p>
-            </div>
+            </motion.div>
             <div className="collCont">
                 <div className="catCont">
                     {categories.map((cat, index) => (
-                        <button
+                        <motion.button
+                        variants={reveal} initial="hidden"     
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.3 }}
                             key={index}
                             className={`catBtn ${activeBtn === index ? "active" : ""}`}
                             onClick={() => {
@@ -86,23 +112,32 @@ export default function Shop() {
                             }}
                         >
                             {cat.name}
-                        </button>
+                        </motion.button>
                     ))}
                 </div>
-                <p className="title">
+                <motion.p
+                variants={reveal} initial="hidden"     
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
+                className="title">
                     <img src={span} alt="titleImg" loading="lazy" />
                     {categories[activeBtn].name}
                     <img src={span} alt="titleImg" loading="lazy" />
-                </p>
+                </motion.p>
 
-                <div className="colls">
+                <div
+                className="colls">
                     {activeCategory.data.map((collData, index) => {
                         const isInWishlist = wishlist.some(
                             (item) => item.key === collData.key && item.category === activeCategory.name
                         );
 
                         return (
-                            <div className="collCard" key={index}>
+                            <motion.div
+                            variants={reveal} initial="hidden"     
+                        whileInView="visible"
+
+                            className="collCard" key={index}>
                                 <div className="top">
                                     <div className="topImg">
                                         <img src={collData.img} alt="CollectionImg" loading="lazy" />
@@ -130,7 +165,7 @@ export default function Shop() {
                                         <i className="fa-solid fa-star-sharp"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>

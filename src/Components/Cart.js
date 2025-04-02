@@ -4,7 +4,7 @@ import pay1 from "../Assets/payment/1.webp"
 import pay2 from "../Assets/payment/2.webp"
 import pay3 from "../Assets/payment/3.webp"
 import pay4 from "../Assets/payment/4.webp"
-
+import { motion } from "framer-motion"
 import { Link , useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -53,9 +53,23 @@ export default function Cart() {
         navigate("/CheckOut");
     };
 
-
+    const reveal ={
+        hidden:{
+            opacity: 0,
+        },
+        visible:{
+            opacity: 1,
+            transition: {
+                duration: 2, 
+            },
+        }
+    }
     return (
-        <div className="cartPage" id="cart-section">
+        <motion.div
+        variants={reveal}
+        initial="hidden"  
+        animate="visible"
+        className="cartPage" id="cart-section">
             <div className="backShop">
                 <Link to="/Shop">
                     <i className="fa-regular fa-arrow-left"></i>
@@ -157,6 +171,6 @@ export default function Cart() {
 
 
 
-        </div>
+        </motion.div>
     );
 }

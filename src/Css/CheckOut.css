@@ -146,7 +146,7 @@
 .checkCont .order .prods .prod p{
     text-transform: capitalize;
     color: var(--fonts);
-    font-size: 19px;
+    font-size: 18px;
 }
 .checkCont .order .prices{
     width: 80%;

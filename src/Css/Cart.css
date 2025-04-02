@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
     gap: 10vh;
-    padding-top: 20vh;
+    padding-block: 15vh;
 }
 
 .cartPage .backShop {
