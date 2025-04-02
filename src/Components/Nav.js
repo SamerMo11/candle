@@ -35,7 +35,7 @@ return (
     </div>
     <div className="navBottom">
 
-    <Link  to="/" className="logo">
+    <Link  to="/" onClick={() => handleScroll("home-section")} className="logo">
         <img src={logo} alt="logo"/>
     </Link>
     

@@ -34,8 +34,9 @@ export default function Whishlist() {
         // يمكن إضافة رسالة أو تغيير الحالة هنا لإعلام المستخدم بأنه تم إضافة المنتج
     };
 
+    const isMobile = window.innerWidth <= 768;
     
-    const reveal ={
+    const reveal =isMobile ? {} :{
         hidden:{
             opacity: 0,
         },

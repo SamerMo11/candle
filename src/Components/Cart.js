@@ -52,8 +52,9 @@ export default function Cart() {
         localStorage.setItem("checkoutItems", JSON.stringify(cartItems));
         navigate("/CheckOut");
     };
-
-    const reveal ={
+    const isMobile = window.innerWidth <= 768;
+    
+    const reveal =isMobile ? {} :{
         hidden:{
             opacity: 0,
         },

@@ -45,8 +45,10 @@ export default function Home(){
     const aboutP1 = "Why are we here?"
     const aboutP2 = "If you can dream it, we can build it."
     const aboutP3 = `"We specialize in handcrafted candles made with love and care, offering a variety of scents and designs to suit every home. Our journey began with a passion for creating beautiful, calming atmospheres, and today, we continue to bring that joy to our customers. Every candle tells a story, and we are proud to be part of your special moments."`
-
-    const pVariants ={
+    
+    const isMobile = window.innerWidth <= 768;
+    
+    const pVariants = isMobile ? {} :{
         hidden:{
             opacity: 0,
         },
@@ -58,7 +60,7 @@ export default function Home(){
     },
 };
 
-    const spanVariants ={
+    const spanVariants =isMobile ? {} :{
         hidden:{
             opacity: 0,
         },
@@ -72,7 +74,7 @@ export default function Home(){
     }
 
 
-    const pVariants2 ={
+    const pVariants2 =isMobile ? {} :{
         hidden:{
             opacity: 0,
         },
@@ -83,7 +85,7 @@ export default function Home(){
         },
     },
 };
-    const spanVariants2 ={
+    const spanVariants2 =isMobile ? {} :{
         hidden:{
             opacity: 0,
         },
@@ -96,7 +98,7 @@ export default function Home(){
         }
     }
 
-    const homeBtn ={
+    const homeBtn =isMobile ? {} :{
         hidden:{
             opacity: 0,
             y:100
@@ -110,7 +112,7 @@ export default function Home(){
             },
         }
     }
-    const WelcomeImg1 ={
+    const WelcomeImg1 =isMobile ? {} :{
         hidden:{
             opacity: 0,
             // x:-40,
@@ -123,7 +125,7 @@ export default function Home(){
             },
         }
     }
-    const WelcomeImg2 ={
+    const WelcomeImg2 =isMobile ? {} :{
         hidden:{
             opacity: 0,
             // x:40
@@ -139,7 +141,7 @@ export default function Home(){
     }
 
 
-    const AboutImg1 ={
+    const AboutImg1 =isMobile ? {} :{
         hidden:{
             opacity: 0,
             // x:40,
@@ -153,7 +155,7 @@ export default function Home(){
         }
     }
 
-    const reveal ={
+    const reveal =isMobile ? {} :{
         hidden:{
             opacity: 0,
             y:100
@@ -167,7 +169,7 @@ export default function Home(){
             },
         }
     }
-    const categoryImg ={
+    const categoryImg =isMobile ? {} :{
         hidden:{
             opacity: 0,
             scale:0,

@@ -69,9 +69,10 @@ export default function Shop() {
         setCart(savedCart);
         localStorage.setItem("cart", JSON.stringify(savedCart));
     };
+    const isMobile = window.innerWidth <= 768;
 
 
-    const reveal ={
+    const reveal =isMobile ? {} :{
         hidden:{
             opacity: 0,
             y:50

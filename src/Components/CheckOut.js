@@ -1,7 +1,7 @@
 import "../Css/CheckOut.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import { motion } from "framer-motion";
 
 export default function CheckOut() {
 
@@ -19,13 +19,29 @@ export default function CheckOut() {
 
 
 
-
+    const isMobile = window.innerWidth <= 768;
+    
+    const reveal =isMobile ? {} :{
+        hidden:{
+            opacity: 0,
+        },
+        visible:{
+            opacity: 1,
+            transition: {
+                duration: 2, 
+            },
+        }
+    }
 
 
 
 
     return(
-        <div className="checkPage">
+        <motion.div
+        variants={reveal}
+        initial="hidden"  
+        animate="visible"
+        className="checkPage">
                 <div className="backCart">
                         <Link to="/Cart" >
                             <i class="fa-regular fa-arrow-left"></i>
@@ -89,6 +105,6 @@ export default function CheckOut() {
             </div>
     
         </div>
-        </div>
+        </motion.div>
     )
 }
