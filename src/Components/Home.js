@@ -47,7 +47,18 @@ export default function Home(){
     const aboutP3 = `"We specialize in handcrafted candles made with love and care, offering a variety of scents and designs to suit every home. Our journey began with a passion for creating beautiful, calming atmospheres, and today, we continue to bring that joy to our customers. Every candle tells a story, and we are proud to be part of your special moments."`
     
     const isMobile = window.innerWidth <= 768;
-    
+
+    const heroImg = isMobile ? {} :{
+        hidden:{
+            clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)'
+        },
+        visible:{
+            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+        transition:{
+            duration:1 , delay:.5
+        },
+    },
+};
     const pVariants = isMobile ? {} :{
         hidden:{
             opacity: 0,
@@ -193,9 +204,7 @@ export default function Home(){
 
             <div className="home" id="home-section">
                 <motion.img
-                initial={{clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)'}}
-                animate={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'}}
-                transition={{duration:3 , delay:.5}}
+                    variants={heroImg} initial="hidden" animate="visible"
                 src={hero} alt="heroimg" loading="lazy"/>
                 <div className="heroText">
                     <motion.h1
