@@ -7,7 +7,7 @@ import { cat1 } from "../Datas/colls/cat1";
 import { cat2 } from "../Datas/colls/cat2";
 import { cat3 } from "../Datas/colls/cat3";
 import { cat4 } from "../Datas/colls/cat4";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 
 export default function Shop() {
     const categories = [
