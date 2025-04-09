@@ -17,7 +17,7 @@
         justify-content: end;
         /* gap: 10px; */
     }
-    nav .navBottom .icons a i {
+    nav .navBottom .icons a svg {
         font-size: clamp(1vw, 5vw, 10vw);
     }
     nav .navBottom .links {
@@ -30,7 +30,7 @@
         justify-content: center;
         gap: 15%;
     }
-    nav .navTop .social i {
+    nav .navTop .social svg {
         font-size: clamp(1vw, 5vw, 10vw);
     }
     nav .links a {
