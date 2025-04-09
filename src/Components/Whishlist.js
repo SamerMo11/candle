@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import span from "../Assets/shop/span.webp";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faXmark, faStar } from '@fortawesome/free-solid-svg-icons'
+import {  faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function Whishlist() {
     const [wishlist, setWishlist] = useState([]);
@@ -62,7 +65,7 @@ export default function Whishlist() {
                 </p>
                 <div className="backShop">
                     <Link to="/Shop">
-                        <i className="fa-regular fa-arrow-left"></i>
+                    <FontAwesomeIcon icon={faArrowLeft} />
                         continue shopping
                     </Link>
                 </div>
@@ -79,7 +82,8 @@ export default function Whishlist() {
                                 <div>
                                     <p onClick={() => addToCart(item)}>add to cart</p>
                                     <button onClick={() => removeFromWishlist(item.title)}>
-                                        <i className="fa-solid fa-xmark"></i>
+                                    <FontAwesomeIcon icon={faXmark}/>
+                                        
                                     </button>
                                 </div>
                             </div>
@@ -89,11 +93,11 @@ export default function Whishlist() {
                                     <p>{item.price}</p>
                                 </div>
                                 <div className="stars">
-                                    <i className="fa-solid fa-star-sharp"></i>
-                                    <i className="fa-solid fa-star-sharp"></i>
-                                    <i className="fa-solid fa-star-sharp"></i>
-                                    <i className="fa-solid fa-star-sharp"></i>
-                                    <i className="fa-solid fa-star-sharp"></i>
+                                <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
                                 </div>
                             </div>
                         </div>

@@ -7,6 +7,8 @@ import { cat1 } from "../Datas/colls/cat1";
 import { cat2 } from "../Datas/colls/cat2";
 import { cat3 } from "../Datas/colls/cat3";
 import { cat4 } from "../Datas/colls/cat4";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 // import { useInView } from "react-intersection-observer";
 
 export default function Shop() {
@@ -148,10 +150,7 @@ export default function Shop() {
                                     <div className="add">
                                         <p onClick={() => addToCart(collData)}>add to cart</p>
                                         <button onClick={() => toggleWishlist(collData)}>
-                                            <i
-                                                className="fa-solid fa-heart"
-                                                style={{ color: isInWishlist ? "red" : "white" }}
-                                            ></i>
+                                        <FontAwesomeIcon icon={faHeart} style={{ color: isInWishlist ? "red" : "white" }} />
                                         </button>
                                     </div>
                                 </div>
@@ -161,11 +160,11 @@ export default function Shop() {
                                         <p>{collData.price}</p>
                                     </div>
                                     <div className="stars">
-                                        <i className="fa-solid fa-star-sharp"></i>
-                                        <i className="fa-solid fa-star-sharp"></i>
-                                        <i className="fa-solid fa-star-sharp"></i>
-                                        <i className="fa-solid fa-star-sharp"></i>
-                                        <i className="fa-solid fa-star-sharp"></i>
+                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar} />
                                     </div>
                                 </div>
                             </motion.div>

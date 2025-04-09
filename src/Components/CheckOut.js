@@ -3,7 +3,8 @@ import "../Responsive/check.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 export default function CheckOut() {
 
 
@@ -46,7 +47,7 @@ export default function CheckOut() {
         id="check-section">
                 <div className="backCart">
                         <Link to="/Cart" >
-                            <i className="fa-regular fa-arrow-left"></i>
+                        <FontAwesomeIcon icon={faArrowLeft} />
                             my cart
                         </Link>
                 </div>

@@ -2,7 +2,10 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Css/Footer.css";
 import "../Responsive/footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { faFacebookF ,faLinkedinIn ,faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { motion } from "framer-motion";
 import logo from "../Assets/logo.webp";
 import foot1 from "../Assets/foot1.webp";
 import foot2 from "../Assets/foot2.webp";
@@ -44,7 +47,7 @@ function Footer() {
     },
   ];
 
-  const socialIcons = ["facebook-f", "twitter", "instagram", "telegram"];
+  // const socialIcons = ["facebook-f", "twitter", "instagram", "telegram"];
 
   return (
     <footer>
@@ -70,9 +73,14 @@ function Footer() {
           <span>reemtawfik500@gmail.com</span>
           <span>+20 236 733 567 25</span>
           <div className="social-icons">
-            {socialIcons.map((icon, idx) => (
-              <i key={idx} className={`fa-brands fa-${icon}`}></i>
-            ))}
+          <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.facebook.com/profile.php?id=100083281736623&mibextid=ZbWKwL">
+                <FontAwesomeIcon icon={faFacebookF}/></motion.a>
+                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.linkedin.com/in/samer-mohamed-5b2586280/">
+                <FontAwesomeIcon icon={faLinkedinIn} /></motion.a>
+                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.instagram.com/samer_mohamed96/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                <FontAwesomeIcon icon={faInstagram}/></motion.a>
+                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://api.whatsapp.com/qr/DSRQF7O6GN4JL1?autoload=1&app_absent=0">
+                <FontAwesomeIcon icon={faWhatsapp}/></motion.a>
           </div>
         </div>
       </div>

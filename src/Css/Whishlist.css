@@ -138,7 +138,7 @@
     align-items: center;
 }
 
-.whishCard .top > div button i {
+.whishCard .top > div button svg {
     font-size: 19px;
     color: var(--f);
 }
@@ -147,6 +147,7 @@
     text-transform: capitalize;
     color: var(--fonts);
     font-size: 19px;
+    cursor: pointer;
 }
 
 /* ------- bottom ------- */

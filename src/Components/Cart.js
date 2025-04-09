@@ -7,6 +7,10 @@ import pay4 from "../Assets/payment/4.webp"
 import { motion } from "framer-motion"
 import { Link , useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faXmark } from '@fortawesome/free-solid-svg-icons'
+import {  faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function Cart() {
 
@@ -73,7 +77,7 @@ export default function Cart() {
         className="cartPage" id="cart-section">
             <div className="backShop">
                 <Link to="/Shop">
-                    <i className="fa-regular fa-arrow-left"></i>
+                <FontAwesomeIcon icon={faArrowLeft} />
                     continue shopping
                 </Link>
             </div>
@@ -104,10 +108,8 @@ export default function Cart() {
 
                             <p className="price price2">{parseInt(item.price) * item.qty} LE</p>
 
-                            <i
-                                className="fa-solid fa-xmark"
-                                onClick={() => removeFromCart(item.key, item.category)}
-                            ></i>
+                            <FontAwesomeIcon icon={faXmark} onClick={() => removeFromCart(item.key, item.category)} />
+                           
                             <span></span>
                         </div>
                     ))}

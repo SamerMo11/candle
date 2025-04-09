@@ -82,7 +82,7 @@
 
 
 .cartPage .mainCont .prodsCont .prodCont  {
-    width: 98%;
+    width: 100%;
     height: 117px;
     display: flex;
     justify-content: space-between;
@@ -91,7 +91,7 @@
     gap: 2vh;
     background-color: #D9D9D91A;
     position: relative;
-    padding-right: 2%;
+    /* padding-right: 2%; */
 }
 
 .cartPage .mainCont .prodsCont .prodCont  .product {
@@ -156,7 +156,7 @@
     color: var(--fonts);
 }
 
-.cartPage .mainCont .prodsCont  i {
+.cartPage .mainCont .prodsCont  svg {
     font-size: 24px;
     cursor: pointer;
     color: var(--fonts);

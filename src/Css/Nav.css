@@ -29,7 +29,7 @@ nav .navTop .social{
     align-items: center;
     margin-left: 3%;
 }
-nav .navTop .social i{
+nav .navTop .social svg{
     color: var(--fonts);
     font-size: clamp(1vw,1vw,4vw);
 }
@@ -66,7 +66,7 @@ nav .links li {
     position: relative;
     /* padding-inline: 10px; */
 }
-nav .links li::before{
+nav .links li a::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -77,11 +77,12 @@ nav .links li::before{
     background-color: var(--btns);
     transition: width .5s;
 }
-nav .links li:hover::before{
+nav .links a:hover::before{
     width: 100%;
 }
 nav .links a {
     height: 100%;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +92,11 @@ nav .links a {
     transition: .5s;
     position: relative;
     text-transform: capitalize;
+}
+
+
+nav .links a.active::before{
+    width: 120%;
 }
 nav .navBottom .icons{
     width: 15%;
@@ -108,6 +114,7 @@ nav .navBottom .icons a{
     align-items: center;
     text-decoration: none;
 }
+
 nav .navBottom .icons a span{
     position: absolute;
     top: 0;
@@ -116,9 +123,8 @@ nav .navBottom .icons a span{
     height: 20px;
     border-radius: 50%;
     background-color: var(--btns);
-
 }
-nav .navBottom .icons a i{
+nav .navBottom .icons a svg{
     font-size: 22px;
     color: var(--fonts);
 }

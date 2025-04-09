@@ -123,7 +123,7 @@
             padding: 5px;
             cursor: pointer;
         }
-        .collCard .add button i{
+        .collCard .add button svg{
             font-size: 19px;
             color: var(--f);
         }
@@ -173,7 +173,7 @@
             width: 100%;
         }
             
-        .stars i{
+        .stars svg{
                 color: #FBB500;
                 font-size: 18px;
             }   

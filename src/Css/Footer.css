@@ -79,7 +79,7 @@ footer .footCenter .links div{
     width: 100%;
 }
 
-footer .footCenter .links div i{
+footer .footCenter .links div svg{
     color: var(--fonts);
     font-size: 20px;
 }
