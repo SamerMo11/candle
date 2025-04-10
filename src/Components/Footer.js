@@ -2,14 +2,14 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Css/Footer.css";
 import "../Responsive/footer.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { faFacebookF ,faLinkedinIn ,faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { motion } from "framer-motion";
 import logo from "../Assets/logo.webp";
 import foot1 from "../Assets/foot1.webp";
 import foot2 from "../Assets/foot2.webp";
-
+import soc1 from "../Assets/icons/social/1.png";
+import soc2 from "../Assets/icons/social/2.png";
+import soc3 from "../Assets/icons/social/3.png";
+import soc4 from "../Assets/icons/social/4.png";
 function Footer() {
   const navigate = useNavigate();
 
@@ -74,13 +74,17 @@ function Footer() {
           <span>+20 236 733 567 25</span>
           <div className="social-icons">
           <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.facebook.com/profile.php?id=100083281736623&mibextid=ZbWKwL">
-                <FontAwesomeIcon icon={faFacebookF}/></motion.a>
-                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.linkedin.com/in/samer-mohamed-5b2586280/">
-                <FontAwesomeIcon icon={faLinkedinIn} /></motion.a>
-                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.instagram.com/samer_mohamed96/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
-                <FontAwesomeIcon icon={faInstagram}/></motion.a>
-                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://api.whatsapp.com/qr/DSRQF7O6GN4JL1?autoload=1&app_absent=0">
-                <FontAwesomeIcon icon={faWhatsapp}/></motion.a>
+                    <img src={soc1} alt="socialIcons"/>
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.linkedin.com/in/samer-mohamed-5b2586280/">
+                    <img src={soc2} alt="socialIcons"/>
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.instagram.com/samer_mohamed96/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                    <img src={soc3} alt="socialIcons"/>
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }} target="_blank" href="https://api.whatsapp.com/qr/DSRQF7O6GN4JL1?autoload=1&app_absent=0">
+                    <img src={soc4} alt="socialIcons"/>
+                </motion.a>
           </div>
         </div>
       </div>

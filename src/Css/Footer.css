@@ -73,13 +73,18 @@ footer .footCenter .links p{
 
 footer .footCenter .links div{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 18px; */
+    width: 60%;
+}
+footer .footCenter .links div a {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
-    width: 100%;
+    width: 20%;
 }
-
-footer .footCenter .links div svg{
-    color: var(--fonts);
-    font-size: 20px;
+footer .footCenter .links div a img{
+    width: 60%;
+    height: 100%;
 }

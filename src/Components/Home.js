@@ -39,12 +39,12 @@ export default function Home(){
 
 
     const homeHead = "ignite the moment with our collections"
-    const homeSub = "Creating moments of warmth and tranquility with the finest candles made with tenderness and love"
+    // const homeSub = "Creating moments of warmth and tranquility with the finest candles made with tenderness and love"
     const welcomeP1 = "welcome to borcelle candle"
-    const welcomeP2 = "Whether you are seeking a serene ambiance for your home, a thoughtful gift for a loved one or simply a moment of relaxation our candles are here to elevate your senses and elevate your space"
+    // const welcomeP2 = "Whether you are seeking a serene ambiance for your home, a thoughtful gift for a loved one or simply a moment of relaxation our candles are here to elevate your senses and elevate your space"
     const aboutP1 = "Why are we here?"
-    const aboutP2 = "If you can dream it, we can build it."
-    const aboutP3 = `"We specialize in handcrafted candles made with love and care, offering a variety of scents and designs to suit every home. Our journey began with a passion for creating beautiful, calming atmospheres, and today, we continue to bring that joy to our customers. Every candle tells a story, and we are proud to be part of your special moments."`
+    // const aboutP2 = "If you can dream it, we can build it."
+    // const aboutP3 = `"We specialize in handcrafted candles made with love and care, offering a variety of scents and designs to suit every home. Our journey began with a passion for creating beautiful, calming atmospheres, and today, we continue to bring that joy to our customers. Every candle tells a story, and we are proud to be part of your special moments."`
     
     const isMobile = window.innerWidth <= 768;
 
@@ -55,23 +55,45 @@ export default function Home(){
         visible:{
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
         transition:{
-            duration:2 , delay:.3
+            duration:1 , delay:.3
         },
     },
 };
-    const pVariants = isMobile ? {} :{
+    const pVariants = isMobile ? {
+        hidden:{
+            opacity: 0,
+        },
+        visible:{
+            opacity: 1,
+            transition: {
+                duration: 0.5, 
+                
+            },
+        }
+    } :{
         hidden:{
             opacity: 0,
         },
         visible:{
             opacity: 1,
         transition:{
-            staggerChildren: .1,
+            staggerChildren: .07,
         },
     },
 };
 
-    const spanVariants =isMobile ? {} :{
+    const spanVariants =isMobile ? {
+        hidden:{
+            opacity: 0,
+        },
+        visible:{
+            opacity: 1,
+            transition: {
+                duration: 0.5, 
+                
+            },
+        }
+    } :{
         hidden:{
             opacity: 0,
         },
@@ -85,31 +107,20 @@ export default function Home(){
     }
 
 
-    const pVariants2 =isMobile ? {} :{
-        hidden:{
-            opacity: 0,
-        },
-        visible:{
-            opacity: 1,
-        transition:{
-            staggerChildren: .03,
-        },
-    },
-};
-    const spanVariants2 =isMobile ? {} :{
+
+
+    const homeBtn =isMobile ? {
         hidden:{
             opacity: 0,
         },
         visible:{
             opacity: 1,
             transition: {
-                duration: 0.1, 
+                duration: 0.5, 
                 
             },
         }
-    }
-
-    const homeBtn =isMobile ? {} :{
+    } :{
         hidden:{
             opacity: 0,
             y:100
@@ -123,50 +134,46 @@ export default function Home(){
             },
         }
     }
-    const WelcomeImg1 =isMobile ? {} :{
+
+    const opacity =isMobile ? {
         hidden:{
             opacity: 0,
-            // x:-40,
         },
         visible:{
             opacity: 1,
-            // x:0,
             transition: {
-                duration: 1, 
+                duration: 0.5, 
+                
             },
         }
-    }
-    const WelcomeImg2 =isMobile ? {} :{
+    } :{
         hidden:{
             opacity: 0,
-            // x:40
         },
         visible:{
             opacity: 1,
-            // x:0,
             transition: {
-                duration: 1, 
+                duration: 2, 
                 
             },
         }
     }
 
 
-    const AboutImg1 =isMobile ? {} :{
+
+
+    const reveal =isMobile ? {
         hidden:{
             opacity: 0,
-            // x:40,
         },
         visible:{
             opacity: 1,
-            // x:0,
             transition: {
-                duration: 1, 
+                duration: 0.5, 
+                
             },
         }
-    }
-
-    const reveal =isMobile ? {} :{
+    } :{
         hidden:{
             opacity: 0,
             y:100
@@ -180,7 +187,7 @@ export default function Home(){
             },
         }
     }
-    const categoryImg =isMobile ? {} :{
+    const categoryImg ={
         hidden:{
             opacity: 0,
             scale:0,
@@ -221,16 +228,10 @@ export default function Home(){
                     </motion.h1>
 
                     <motion.p
-                    variants={pVariants} initial="hidden" animate="visible"
+                    variants={opacity} initial="hidden" animate="visible"
+                
                     >
-                     {homeSub.split("").map((char, index)=>(
-
-                        <motion.span
-                        key={index} variants={spanVariants}
-
-                        >{char}
-                            </motion.span>
-                        ))}
+                     Creating moments of warmth and tranquility with the finest candles made with tenderness and love
                     </motion.p>
                         <motion.div
                     variants={homeBtn} initial="hidden" animate="visible"
@@ -245,7 +246,7 @@ export default function Home(){
 
         <div className="welcome">
             <motion.div className="img"
-                                variants={WelcomeImg1}
+                                variants={opacity}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: false, amount: 0.8 }}
@@ -269,23 +270,15 @@ export default function Home(){
             
             </motion.p>
             <motion.p
-            variants={pVariants2}
+            variants={opacity}
             initial="hidden"
             whileInView="visible"
             >
-            {welcomeP2.split("").map((char, index)=>(
-
-                <motion.span
-                key={index} variants={spanVariants2}
-
-                >{char}
-                    </motion.span>
-                ))}
-            
+            Whether you are seeking a serene ambiance for your home, a thoughtful gift for a loved one or simply a moment of relaxation our candles are here to elevate your senses and elevate your space
             </motion.p>
             </div>
             <motion.div className="img"
-            variants={WelcomeImg2}
+            variants={opacity}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.8 }}
@@ -296,50 +289,38 @@ export default function Home(){
         <div className="about" id="about-section">
         <div className="text">
         <motion.p
-        variants={pVariants2}
+        variants={pVariants}
         initial="hidden"
         whileInView="visible"
         >
         {aboutP1.split("").map((char, index)=>(
 
             <motion.span
-            key={index} variants={spanVariants2}
+            key={index} variants={spanVariants}
 
             >{char}
                 </motion.span>
             ))}
         </motion.p>
         <motion.p
-        variants={pVariants2}
+        variants={opacity}
         initial="hidden"
         whileInView="visible"
         >
-        {aboutP2.split("").map((char, index)=>(
+    If you can dream it, we can build it.
 
-            <motion.span
-            key={index} variants={spanVariants2}
-
-            >{char}
-                </motion.span>
-            ))}
         </motion.p>
         <motion.p
-        variants={pVariants2}
+        variants={opacity}
         initial="hidden"
         whileInView="visible"
         >
-        {aboutP3.split("").map((char, index)=>(
+        We specialize in handcrafted candles made with love and care, offering a variety of scents and designs to suit every home. Our journey began with a passion for creating beautiful, calming atmospheres, and today, we continue to bring that joy to our customers. Every candle tells a story, and we are proud to be part of your special moments.
 
-            <motion.span
-            key={index} variants={spanVariants2}
-
-            >{char}
-                </motion.span>
-            ))}
         </motion.p>
         </div>
     <motion.div className="imgs"
-    variants={AboutImg1}
+    variants={opacity}
     initial="hidden"
     whileInView="visible"
     viewport={{ once: false, amount: 0.8 }}

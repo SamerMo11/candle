@@ -52,6 +52,7 @@
         order: 1;
     }
     .welcome .wPara p:nth-child(2) {
+        width: 95%;
         font-size: clamp(3vw, 5vw, 15vw);
         line-height: clamp(2vw, 6vw, 15vw) ;
         text-align: center;

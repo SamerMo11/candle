@@ -23,7 +23,7 @@
         height: 60vw;
         padding-right: 0;
     }
-    .cartPage .mainCont .prodsCont i {
+    .cartPage .mainCont .prodsCont svg {
         font-size: clamp(1vw, 8vw, 10vw);
         top: 0%;
         left: 100%;

@@ -5,10 +5,14 @@ import '../Responsive/nav.css';
 import logo from "../Assets/logo.webp";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF ,faLinkedinIn ,faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { faUser, faHeart } from '@fortawesome/free-regular-svg-icons'
-import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
+import soc1 from "../Assets/icons/social/1.png";
+import soc2 from "../Assets/icons/social/2.png";
+import soc3 from "../Assets/icons/social/3.png";
+import soc4 from "../Assets/icons/social/4.png";
+import nav1 from "../Assets/icons/navicons/1.png";
+import nav2 from "../Assets/icons/navicons/2.png";
+import nav3 from "../Assets/icons/navicons/3.png";
+
 
 
 function Nav() {
@@ -33,14 +37,18 @@ function Nav() {
         <nav>
             <div className="navTop">
                 <div className="social">
-                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.facebook.com/profile.php?id=100083281736623&mibextid=ZbWKwL">
-                <FontAwesomeIcon icon={faFacebookF}/></motion.a>
-                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.linkedin.com/in/samer-mohamed-5b2586280/">
-                <FontAwesomeIcon icon={faLinkedinIn} /></motion.a>
-                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.instagram.com/samer_mohamed96/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
-                <FontAwesomeIcon icon={faInstagram}/></motion.a>
-                <motion.a whileHover={{ scale: 1.3 }} transition={{ duration: 0.3 }} target="_blank" href="https://api.whatsapp.com/qr/DSRQF7O6GN4JL1?autoload=1&app_absent=0">
-                <FontAwesomeIcon icon={faWhatsapp}/></motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.facebook.com/profile.php?id=100083281736623&mibextid=ZbWKwL">
+                    <img src={soc1} alt="socialIcons"/>
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.linkedin.com/in/samer-mohamed-5b2586280/">
+                    <img src={soc2} alt="socialIcons"/>
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }} target="_blank" href="https://www.instagram.com/samer_mohamed96/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                    <img src={soc3} alt="socialIcons"/>
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }} target="_blank" href="https://api.whatsapp.com/qr/DSRQF7O6GN4JL1?autoload=1&app_absent=0">
+                    <img src={soc4} alt="socialIcons"/>
+                </motion.a>
                 </div>
             </div>
 
@@ -77,13 +85,19 @@ function Nav() {
 
                 <div className="icons">
                     <Link to="/#">
-                    <FontAwesomeIcon icon={faUser} />
+                    <motion.img
+                    whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}
+                    src={nav1} alt="socialIcons"/>
                     </Link>
                     <Link to="/Cart" onClick={() => handleScroll("cart-section")}>
-                    <FontAwesomeIcon icon={faBagShopping} />
+                    <motion.img
+                    whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}
+                    src={nav2} alt="socialIcons"/>
                     </Link>
                     <Link to="/Whishlist" onClick={() => handleScroll("whish-section")}>
-                    <FontAwesomeIcon icon={faHeart} />
+                    <motion.img
+                    whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}
+                    src={nav3} alt="socialIcons"/>
                     </Link>
                 </div>
             </div>
